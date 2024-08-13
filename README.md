@@ -2,7 +2,7 @@
 
 The epic texture swapping mod by the best smelling cologne in the GD community himself... now **without patches**!
 
-This was mainly done as an excuse to learn some raw reverse engineering (thank you to whoever leaked IDA 9.0 for your immense hard work 🫡), but also to make this mod truly multi-platform (maybe, I haven't tested this for Android myself but it *should* work).
+This was mainly done as an excuse to learn some raw reverse engineering (thank you to whoever leaked IDA 9.0 for your immense hard work 🫡), but also to make this mod truly multi-platform (mostly; it doesn't work on Android32 due to __int128 not working there :/).
 This mod does use some bindings that are currently unavailable for m1 and mainly imac atm, but here are the bindings for them both that you can put in your own bindings repo if you wish:
 ```
 void EnhancedGameObject::updateUserCoin() = win 0x19c930, m1 0x4f958c, imac 0x5ca6b0;
