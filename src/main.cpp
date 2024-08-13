@@ -64,7 +64,11 @@ class $modify(EnhancedGameObject) {
   		cocos2d::CCParticleSystemQuad *v5; // x20
   		int v6; // s0
   		int v12; // s0
+        #if !defined (GEODE_IS_WINDOWS)
   		__int64_t v13; // [xsp+0h] [xbp-20h] BYREF (its __int64_t and not __int64 because __int64 doesnt exist on mac :>)
+        #else
+        __int64 v13; // [xsp+0h] [xbp-20h] BYREF (its __int64_t and not __int64 because __int64 doesnt exist on mac :>)
+        #endif
   		int v14; // [xsp+8h] [xbp-18h]
   		int v15; // [xsp+Ch] [xbp-14h]
 
@@ -100,6 +104,7 @@ class $modify(GameObject)
 {
     void playDestroyObjectAnim(GJBaseGameLayer *p0)
     {
+        #if !defined (GEODE_IS_WINDOWS)
         __int64_t v2;                       // x20
         __int64_t v4;                       // x23
         bool v5;                            // w8
@@ -140,6 +145,49 @@ class $modify(GameObject)
         cocos2d::CCSprite *v216;            // rdx
         GameObject *v217;                   // rcx
         int v7;
+        #else
+        __int64 v2;                       // x20
+        __int64 v4;                       // x23
+        bool v5;                            // w8
+        int v6;                             // w9
+        cocos2d::CCSprite *m_colorSprite;   // x0
+        double *v8;                         // x0
+        double v9;                          // d0 OVERLAPPED
+        GameObjectType m_objectType;        // w24
+        bool hasUniqueCoin;                 // w21
+        double *v12;                        // x0
+        double v13;                         // d0 OVERLAPPED
+        cocos2d::CCParticleSystemQuad *v14; // x0
+        cocos2d::CCParticleSystemQuad *v15; // x22
+        int v16;                            // s0
+        int v22;                            // s0
+        CCCircleWave *v23;                  // x22
+        __int128 __dst;                     // [xsp+60h] [xbp-90h] BYREF
+        __int64 v130;                     // x0
+        CCCircleWave *v131;                 // x0
+        __int64 v132;                     // x22
+        int v133;                           // w8
+        __int64 v134;                     // x0
+        const char *v135;                   // x8
+        GameObjectType v136;                // w9
+        const char *v137;                   // x10
+        const char *v138;                   // x23
+        char *v139;                         // x0
+        char *v140;                         // x20
+        cocos2d::CCNode *v141;              // x21
+        __int64 v142;                     // x0
+        __int64 v143;                     // x0
+        __int64 v144;                     // x0
+        __int64 v211;                     // [xsp+70h] [xbp-80h]
+        __int64 v212;                     // [xsp+78h] [xbp-78h] BYREF
+        __int64 v213;                     // [xsp+80h] [xbp-70h] BYREF
+        float v214;                         // xmm3_4
+        float v215;                         // xmm2_4
+        cocos2d::CCSprite *v216;            // rdx
+        GameObject *v217;                   // rcx
+        int v7;
+        #endif
+
 
         if (this->m_objectType == GameObjectType::UserCoin) {
             hasUniqueCoin = p0->hasUniqueCoin((EffectGameObject *)this);
