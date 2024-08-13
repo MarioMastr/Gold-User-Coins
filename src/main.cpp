@@ -52,10 +52,6 @@ class $modify(LoadingLayer) {
 };
 
 class $modify(EnhancedGameObject) {
-    static void onModify(auto& self) {
-        self.setHookPriority("EnhancedGameObject::updateUserCoin", 1024);
-    }
-
 	void updateUserCoin() {
 		// time for a complete reverse engineer!!!
 
