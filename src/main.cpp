@@ -63,7 +63,7 @@ class $modify(EnhancedGameObject) {
         #if !defined (GEODE_IS_WINDOWS)
   		__int64_t v13; // [xsp+0h] [xbp-20h] BYREF (its __int64_t and not __int64 because __int64 doesnt exist on mac :>)
         #else
-        __int64 v13; // [xsp+0h] [xbp-20h] BYREF (its __int64_t and not __int64 because __int64 doesnt exist on mac :>)
+        __int64 v13; // [xsp+0h] [xbp-20h] BYREF
         #endif
   		int v14; // [xsp+8h] [xbp-18h]
   		int v15; // [xsp+Ch] [xbp-14h]
@@ -117,7 +117,7 @@ class $modify(GameObject)
         int v16;                            // s0
         int v22;                            // s0
         CCCircleWave *v23;                  // x22
-        __int128 __dst;                     // [xsp+60h] [xbp-90h] BYREF
+        // __int128 __dst;                  // [xsp+60h] [xbp-90h] BYREF (used in the setting of the colour that we now no longer want :>)
         __int64_t v130;                     // x0
         CCCircleWave *v131;                 // x0
         __int64_t v132;                     // x22
